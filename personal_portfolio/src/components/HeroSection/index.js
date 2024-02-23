@@ -1,11 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-
+import React from "react";
+import styled from "styled-components";
 
 const Hero = () => {
   return (
-    <div>Hero</div>
-  )
-}
+    <div id="about">
+      <HeroContainer>
+        <Herobg></Herobg>
+      </HeroContainer>
+    </div>
+  );
+};
 
-export default Hero
+export default Hero;
