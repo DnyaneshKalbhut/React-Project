@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {Bio} from "../../data/constants"
-import Typewriter from "typewriter-effect"
+import { Bio } from "../../data/constants";
+import Typewriter from "typewriter-effect";
+import dk from "../../images/dk.jpg";
+import HeroBgAnimation from "../HeroBgAnimation"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -153,32 +155,35 @@ const ResumeButton = styled.a`
   font-size: 20px;
 
   &:hover {
-   transform: scale(1.05);
-   transition: all 0.4s ease-in-out;
-   box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
-   filter: brightness(1);
-}   
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-    color: white;
-`;
-// const Img = styled.img`
-//   border-radius: 50%;
-//   width: 100%;
-//   height: 100%;
-//   max-width: 400px;
-//   max-height: 400px;
-//   border: 2px solid ${({ theme }) => theme.primary};
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+    filter: brightness(1);
+  }
 
-//   @media (max-width: 640px) {
-//     max-width: 280px;
-//     max-height: 280px;
-//   }
-// `;
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+  }
+  color: white;
+`;
+const Image = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 400px;
+  /* margin-top: 10px; */
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid ${({ theme }) => theme.primary};
+
+  @media (max-width: 640px) {
+    max-width: 280px;
+    max-height: 280px;
+  }
+`;
 
 const Herobg = styled.div`
   position: absolute;
@@ -188,7 +193,7 @@ const Herobg = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   height: 100%;
   max-width: 1360px;
   overflow: hidden;
@@ -204,35 +209,39 @@ const Herobg = styled.div`
   }
 `;
 
-
-
-
 const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <Herobg></Herobg>
+        <Herobg>
+          <HeroBgAnimation />
+        </Herobg>
         <HeroInnerContainer>
           <HeroLeftContainer>
-             <Title>
-              Hi, I Am <br/>
+            <Title>
+              Hi, I Am <br />
               {Bio.name}
-             </Title>
-             <TextLoop>
-              I Am about<Span>
+            </Title>
+            <TextLoop>
+              I Am about
+              <Span>
                 <Typewriter
-                options={{
-                  strings:Bio.roles,
-                  autoStart:true,
-                  loop:true,
-                }}
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
                 />
               </Span>
-             </TextLoop>
-             <SubTitle>{Bio.description}</SubTitle>
-             <ResumeButton href={Bio.resume} target="_blank">Check Resume</ResumeButton>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+            <ResumeButton href={Bio.resume} target="_blank">
+              Check Resume
+            </ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer></HeroRightContainer>
+          <HeroRightContainer>
+            <Image src={dk} />
+          </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
     </div>
