@@ -6,6 +6,12 @@ import ProjectCard from '../ProjectCard';
 
 
 const Container = styled.div`
+background: linear-gradient(
+    343.07deg,
+    rgba(132, 59 ,206,0.06) 5.71%,
+    rgba(132, 59 ,206,0) 64.83%,
+
+);
 margin-top: 100px;
 display: flex;
 flex-direction: column;
@@ -14,6 +20,7 @@ position: relative;
 z-index: 1;
 padding: 0 16px;
 align-items: center;
+clip-path: polygon(0 0 , 100% 0 , 100% 100% , 100% 98%,0 100%);
 `;
 const Wrapper = styled.div`
   position: relative;
@@ -22,6 +29,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  /* padding:10px 0px 100px 0; */
   max-width: 1100px;
   gap: 12px;
   @media (max-width: 960px) {
