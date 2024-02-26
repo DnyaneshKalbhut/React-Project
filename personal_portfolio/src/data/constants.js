@@ -252,7 +252,7 @@ export const Bio = {
       description:
         "Docs ",
       image:
-        "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+        "https://github.com/DnyaneshKalbhut/React-Project/blob/main/personal_portfolio/React-Docs.png?raw=true",
       tags: [
         "React JS",
         "Javascript",
