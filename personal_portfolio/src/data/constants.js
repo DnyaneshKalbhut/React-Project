@@ -270,7 +270,7 @@ export const Bio = {
       description:
         "Develop my Personal Portfolio.Embark on a journey through my digital presence with my Personal Portfolio Website. Meticulously crafted using React, this platform serves as a dynamic showcase of my skills, projects, and the evolution of my journey in the world of web development.",
       image:
-        "https://github.com/DnyaneshKalbhut/React-Project/blob/main/personal_portfolio/src/Portfolio.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiOMrpqAgKRzH6-gTPFQZm2BvxkM9nt4HAIg&usqp=CAU",
       tags: ["React Js", "Javascript","material ui", "Redux"],
       category: "web app",
       github: "https://github.com/rishavchanda/Podstream",
