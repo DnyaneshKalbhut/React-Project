@@ -72,7 +72,7 @@ gap: 12px;
 
 const Experience = () => {
     return (
-      <Container id='experience'>
+      <Container id='Experience'>
         <Wrapper>
           <Title>Experience</Title>
           <Desc>Here are some of my experiences</Desc>
