@@ -10,7 +10,7 @@ display: none;
 
 &:hover{
     cursor: pointer;
-    opacity?:10px ;
+    opacity:10px ;
 }
 ` ;
 
